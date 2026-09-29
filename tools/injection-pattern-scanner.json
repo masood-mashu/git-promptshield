@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "scan_injection_patterns",
+  "description": "Detects instruction overrides, system prompt leak requests, and adversarial boundary markers",
+  "type": "object",
+  "properties": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw user prompt string to inspect"
+    }
+  },
+  "required": [
+    "prompt_text"
+  ]
+}

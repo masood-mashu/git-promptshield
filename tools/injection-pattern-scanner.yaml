@@ -1,0 +1,14 @@
+name: "injection-pattern-scanner"
+description: "Detects instruction overrides, system prompt leak requests, and adversarial boundary markers"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "injection_pattern_scanner.py"
+parameters:
+  type: "object"
+  properties:
+    prompt_text:
+      type: "string"
+      description: "Raw user prompt string to inspect"
+  required:
+    - "prompt_text"

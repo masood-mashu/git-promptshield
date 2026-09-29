@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "analyze_jailbreak_heuristics",
+  "description": "Computes adversarial semantic score for multi-turn roleplay bypasses and hypotheticals",
+  "type": "object",
+  "properties": {
+    "conversation_payload": {
+      "type": "string",
+      "description": "Conversation transcript or prompt string"
+    }
+  },
+  "required": [
+    "conversation_payload"
+  ]
+}
