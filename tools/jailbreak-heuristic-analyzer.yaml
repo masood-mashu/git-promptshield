@@ -1,14 +1,18 @@
-name: "jailbreak-heuristic-analyzer"
+name: jailbreak-heuristic-analyzer
+version: 1.0.0
 description: "Computes adversarial semantic score for multi-turn roleplay bypasses and hypotheticals"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "jailbreak_heuristic_analyzer.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     conversation_payload:
-      type: "string"
+      type: string
       description: "Conversation transcript or prompt string"
   required:
-    - "conversation_payload"
+    - conversation_payload
+implementation:
+  type: script
+  path: jailbreak_heuristic_analyzer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
